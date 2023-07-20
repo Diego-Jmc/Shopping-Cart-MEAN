@@ -1,0 +1,39 @@
+
+<section class="page-banner">
+    <h2 class="">Push yourself, because no one else is going to do it for you.</h2>
+
+
+    <p class="font-weight-light">
+        "Chase your dreams, conquer your goals, 
+        and leave a legacy on the field of play. 
+        With passion, dedication, and a relentless spirit, 
+        there's no limit to what you can achieve in sports and in life.
+        Embrace the challenges, push your boundaries,
+         and become the best version of yourself through the power of sports."
+    </p>
+
+    <button type="button" class="btn btn-secondary">Start!</button>
+
+</section>
+
+
+<section class="products-container">
+
+
+    <div *ngFor="let item of products">
+
+
+        <div class="card" style="width: 18rem;">
+            <img src="{{ item.img }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.name }}</h5>
+              <p class="card-text">{{ item.description }}</p>
+              <p class="text-success">prize: ${{item.prize}} </p>
+              <button (click)="buyArticle(item)" class="btn btn-primary">Comprar</button>
+            </div>
+          </div>
+
+
+    </div>
+
+</section>

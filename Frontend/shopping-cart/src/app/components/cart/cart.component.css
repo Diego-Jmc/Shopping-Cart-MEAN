@@ -1,0 +1,39 @@
+.li-item-cart{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.li-item-cart img{
+    width: 100px;
+    height: 100px;
+}
+
+.li-item-cart-product-info{
+    display: flex;
+    align-items: center;
+}
+
+.li-item-cart-product-info p{
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+.li-item-counter{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.amount-item{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.payment-methods img{
+
+    width: 70px;
+    height: 50px;
+
+}

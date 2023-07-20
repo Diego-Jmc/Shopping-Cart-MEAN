@@ -1,0 +1,88 @@
+
+<h2 class="mt-2" >Cart</h2>
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of products " >
+      <div class="li-item-cart">
+        <div class="li-item-cart-product-info">
+            <img src="{{item.img}}">
+            <p>{{ item.name }}</p>
+        </div>
+
+        <div class="li-item-counter">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" (click)="updateProduct(item,1)" class="btn btn-primary">+</button>
+                <button type="button" (click)="updateProduct(item,-1)" class="btn btn-primary">-</button>
+              </div>
+
+           <p class="amount-item">x <span></span>{{ item.amount }}</p>
+
+           <p>Total: <span class="text-success"> $ {{ (item.prize * item.amount).toFixed(2) }} </span></p>
+
+        </div>
+
+      </div>
+    </li>
+  </ul>
+  
+
+<div *ngIf="products.length != 0">
+    <div class="d-flex p-2 justify-content-between"> <div class="d-flex"><p class="font-weight-bold">Total: </p>  <span class="text-success" > $ {{ getTotal().toFixed(2)  }} </span></div> <div >
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">
+        Pagar
+       </button>
+    </div>
+ </div>
+
+</div>
+
+
+
+
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Detalles de pago</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         
+
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Titular</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Titular de la tarjeta">
+                  <small id="emailHelp" class="form-text text-muted">Esta información es confidencial y nunca será compartida.</small>
+                </div>
+
+                <div class="form-group"> 
+                    <label for="target-number-input">Número de tarjeta<i class="bi bi-credit-card-2-front"></i></label>
+                    <input name="target-number" [(ngModel)]="targetNumber" type="text" class="form-control" id="target-number-input" placeholder="xxxx-xxxx-xxxx-xxxx">
+                    
+                </div>
+
+                <div class="form-group">
+                   <label>Código de seguridad</label> 
+                   <input class="form-control" name="securityCode" placeholder="CVV" maxlength="3">
+                </div>
+
+              </form>
+
+
+
+            <div class="payment-methods mt-2">
+                <img src="../assets/visa.png">
+                <img src="../assets/paypal.jpg">
+                <img src="../assets/mastercard.jpg">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success">Pagar</button>
+        </div>
+      </div>
+    </div>
+  </div>
