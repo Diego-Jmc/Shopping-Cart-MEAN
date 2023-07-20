@@ -1,0 +1,17 @@
+# Dependencias
+/node_modules
+
+# Archivos generados por herramientas de construcción
+/build
+/dist
+/out
+
+# Archivos de registro
+*.log
+
+# Archivos de configuración de desarrollo locales
+.env
+
+# Archivos de respaldo creados por editores de código
+*~
+
