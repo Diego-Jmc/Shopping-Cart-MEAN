@@ -1,0 +1,48 @@
+
+<h2 class="admin-tittle">Administrator Module</h2>
+
+
+<form>
+    <div class="form-group">
+      <label for="productName">Product Name</label>
+      <input type="text" class="form-control" id="productName" aria-describedby="emailHelp" placeholder="Name">
+    </div>
+    <div class="form-group">
+      <label for="description-input">Description</label>
+       <textarea id="description-input" class="add-product-description-ta"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="product-price-input">Price</label>
+        <input type="number" class="form-control" id="product-price-input" aria-describedby="emailHelp" placeholder="Name">
+      </div>
+
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Category</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01">
+          <option selected>Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Image</span>
+        </div>
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="inputGroupFile01">
+          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+        </div>
+      </div>
+
+
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

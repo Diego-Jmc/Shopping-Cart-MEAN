@@ -1,0 +1,11 @@
+.add-product-description-ta{
+    display: block;
+    width: 100%;
+    resize: none;
+    border:1px solid #ced4da;
+    outline: none;
+}
+
+.admin-tittle{
+    margin-top: 2rem;
+}
